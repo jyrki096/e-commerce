@@ -1,1 +1,1 @@
-﻿
+﻿global using Catalog.Domain.Entities;
