@@ -4,4 +4,5 @@ global using Catalog.Domain.Entities;
 global using Catalog.Infrastructure.Data;
 global using Marten;
 global using Marten.Schema;
-
+global using Catalog.Domain.Repositories;
+global using Catalog.Infrastructure.Repositories;

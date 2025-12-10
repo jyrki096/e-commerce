@@ -1,4 +1,5 @@
-﻿using JasperFx;
+﻿
+
 
 namespace Catalog.Infrastructure;
 
@@ -12,6 +13,10 @@ public static class DependencyInjection
                 .UseLightweightSessions()
                 .InitializeWith<InitializeDatabaseAsync>();
         
+        
+        services.AddScoped<IBrandRepository, CatalogRepository>();
+        services.AddScoped<ICatalogRepository, CatalogRepository>();
+        services.AddScoped<ICatalogItemRepository, CatalogRepository>();
         return services;
     }
 }
