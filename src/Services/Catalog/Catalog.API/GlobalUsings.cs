@@ -5,3 +5,5 @@ global using Catalog.Application.Query.BrandQueries;
 global using Catalog.Application.Responses.BrandResponses;
 global using MediatR;
 global using Microsoft.AspNetCore.Mvc;
+global using Asp.Versioning;
+global using Microsoft.OpenApi;
