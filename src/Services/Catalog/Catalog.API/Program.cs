@@ -10,6 +10,4 @@ var app = builder.Build();
 
 app.UseApiServices();
 
-app.MapGet("/", () => "Hello World!");
-
 app.Run();
