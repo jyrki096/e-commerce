@@ -9,4 +9,6 @@ global using Asp.Versioning;
 global using Microsoft.OpenApi;
 global using System.Net;
 global using Catalog.Application.Responses.CategoryResponses;
-global using Catalog.Application.Query.CategoryQuery;
+global using Catalog.Application.Query.CategoryQueries;
+global using Catalog.Application.Query.CatalogItemQueries;
+global using Catalog.Application.Responses.CatalogItemResponses;
