@@ -1,6 +1,6 @@
 ﻿namespace Catalog.Infrastructure.Repositories;
 
-public class CatalogRepository(IDocumentSession session) : IBrandRepository, ICatalogRepository,ICatalogItemRepository
+public class CategoryRepository(IDocumentSession session) : IBrandRepository, ICategoryRepository,ICatalogItemRepository
 {
     public async Task<IEnumerable<Brand>> GetAllBrandsAsync()
     {

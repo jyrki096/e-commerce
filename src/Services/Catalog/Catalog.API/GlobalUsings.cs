@@ -7,3 +7,6 @@ global using MediatR;
 global using Microsoft.AspNetCore.Mvc;
 global using Asp.Versioning;
 global using Microsoft.OpenApi;
+global using System.Net;
+global using Catalog.Application.Responses.CategoryResponses;
+global using Catalog.Application.Query.CategoryQuery;
