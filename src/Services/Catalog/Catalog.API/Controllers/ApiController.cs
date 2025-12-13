@@ -5,7 +5,7 @@ namespace Catalog.API.Controllers
     [Route("api/v{version:apiVersion}/[controller]")]
     public class ApiController : ControllerBase
     {
-        private IMediator mediator;
+        private IMediator? mediator;
         
         protected IMediator Mediator 
             => mediator ??= HttpContext.RequestServices.GetService<IMediator>() 
