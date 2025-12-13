@@ -22,5 +22,12 @@ namespace Catalog.API.Controllers
         {
             return Ok(await Mediator.Send(new GetCatalogItemByTitleQuery(catalogItemTitle)));
         }
+        
+        [HttpGet("brand/{brandTitle}")]
+        [ProducesResponseType(typeof(GetCatalogItemByBrandTitleResult), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<GetCatalogItemByBrandTitleResult>> GetByBrandTitle(string brandTitle)
+        {
+            return Ok(await Mediator.Send(new GetCatalogItemByTitleQuery(brandTitle)));
+        }
     }
 }
