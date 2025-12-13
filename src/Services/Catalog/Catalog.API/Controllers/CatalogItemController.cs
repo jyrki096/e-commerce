@@ -1,3 +1,5 @@
+using Catalog.Application.Commands.CatalogItemCommands;
+
 namespace Catalog.API.Controllers
 {
     public class CatalogItemController : ApiController
@@ -28,6 +30,15 @@ namespace Catalog.API.Controllers
         public async Task<ActionResult<GetCatalogItemByBrandTitleResult>> GetByBrandTitle(string brandTitle)
         {
             return Ok(await Mediator.Send(new GetCatalogItemByTitleQuery(brandTitle)));
+        }
+        
+        [HttpPost]
+        [ProducesResponseType(typeof(CreateCatalogItemResult), (int)HttpStatusCode.Created)]
+        public async Task<ActionResult<CreateCatalogItemResult>> CreateCatalogItem(
+            [FromBody] CreateCatalogItemCommand command)
+        {
+            var result = await Mediator.Send(command);
+            return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
         }
     }
 }

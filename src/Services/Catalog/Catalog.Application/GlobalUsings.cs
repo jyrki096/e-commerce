@@ -9,3 +9,6 @@ global using Catalog.Application.Responses.CategoryResponses;
 global using Catalog.Application.Query.CategoryQueries;
 global using Catalog.Application.Responses.CatalogItemResponses;
 global using Catalog.Application.Query.CatalogItemQueries;
+global using Catalog.Application.DTO;
+global using Catalog.Application.Commands.CatalogItemCommands;
+global using Mapster;
